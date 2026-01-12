@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文佳音 Wen Jiayin | Portfolio</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Noto Serif SC"', 'serif'],
+                    },
+                    colors: {
+                        'accent': '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #fff; }
+        ::-webkit-scrollbar-thumb { background: #e5e7eb; }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-[#FCFCFC] text-gray-900 font-sans antialiased selection:bg-black selection:text-white">
+
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full bg-[#FCFCFC]/90 backdrop-blur-sm z-50 py-6 border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-sm font-bold tracking-widest uppercase">WEN JIAYIN.</a>
+            <div class="hidden md:flex space-x-10 text-xs font-medium text-gray-400 tracking-wider uppercase">
+                <a href="#about" class="hover:text-black transition-colors">简介</a>
+                <a href="#projects" class="hover:text-black transition-colors">项目</a>
+                <a href="#honors" class="hover:text-black transition-colors">荣誉</a>
+                <a href="#experience" class="hover:text-black transition-colors">经历</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- 头部简介 Hero Header -->
+        <header id="about" class="grid md:grid-cols-3 gap-12 items-start mb-32 fade-in-up">
+            <div class="md:col-span-2 pt-8">
+                <p class="text-gray-400 text-xs font-bold tracking-[0.2em] uppercase mb-6">Computational Artist & Architect</p>
+                <h1 class="text-4xl md:text-5xl font-serif font-medium leading-tight mb-8 text-gray-900">
+                    你好，我是文佳音。<br>
+                    探索<span class="italic text-gray-400">建筑空间</span>与<br>
+                    <span class="italic text-gray-400">计算艺术</span>的边界。
+                </h1>
+                <p class="text-gray-600 leading-relaxed text-sm max-w-lg mb-8">
+                    拥有建筑学学士背景，现于伦敦大学金史密斯学院攻读计算艺术硕士。致力于通过代码（Javascript/Unity/C/C++/C#）重塑物理空间的叙事，将复杂的逻辑转化为优雅的交互体验。
+                </p>
+                <div class="flex gap-4">
+                    <a href="mailto:wjy20000324@163.com" class="px-8 py-3 bg-black text-white text-xs font-bold tracking-widest uppercase hover:bg-gray-800 transition-colors">
+                        Email Me
+                    </a>
+                    <a href="https://pan.baidu.com/s/1Tx5fVyd9qn1yK-pUY9p1qg?pwd=tt1v" target="_blank" class="px-8 py-3 border border-gray-200 text-gray-600 text-xs font-bold tracking-widest uppercase hover:border-black hover:text-black transition-colors">
+                        查看作品集
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 头像区域 (已修复语法错误) -->
+            <div class="relative group">
+                <div class="aspect-[3/4] overflow-hidden bg-gray-100">
+                    <img src="avatar.jpg" alt="Wen Jiayin" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out">
+                </div>
+                <div class="mt-4 text-xs text-gray-400 font-mono text-right">
+                    London / Chongqing<br>
+                    Born 2000.03
+                </div>
+            </div>
+        </header>
+
+        <!-- 教育背景 Education -->
+        <section class="mb-24 fade-in-up delay-100 border-t border-gray-100 pt-16">
+            <h2 class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-12">教育背景 Education</h2>
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="text-sm text-gray-400 font-mono">2024.09 — 至今</div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-xl font-serif font-medium mb-1">伦敦大学金史密斯学院 (Goldsmiths)</h3>
+                        <p class="text-sm text-gray-500 mb-3">计算艺术 | 交互设计硕士</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="text-sm text-gray-400 font-mono">2018.09 — 2024.06</div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-xl font-serif font-medium mb-1">中国石油大学（华东）</h3>
+                        <p class="text-sm text-gray-500 mb-3">建筑学 | 本科 (Architecture)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精选项目 Projects -->
+        <section id="projects" class="mb-24 fade-in-up delay-200 border-t border-gray-100 pt-16">
+            <h2 class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-12">精选项目 Projects</h2>
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-16">
+                <!-- Project 1 (已修复语法错误) -->
+                <article class="group cursor-pointer">
+                    <div class="aspect-[16/10] bg-gray-100 mb-6 overflow-hidden">
+                        <img src="project1.jpg" alt="青岛文创" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">琴岛游礼：建筑遗产文创设计</h3>
+                    <p class="text-xs text-gray-400 mb-3 font-mono">外观设计专利三项 / 负责人</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        在青岛老城区申遗背景下，将数字化测绘成果转化为文创产品。获外观设计专利三项（印章、冰箱贴、包装盒），推动遗产保护与创意设计的融合。
+                    </p>
+                </article>
+
+                <!-- Project 2 (已修复语法错误) -->
+                <article class="group cursor-pointer">
+                    <div class="aspect-[16/10] bg-gray-100 mb-6 overflow-hidden">
+                        <img src="project2.jpg" alt="历史街区" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">连接与重塑：历史街区共生设计</h3>
+                    <p class="text-xs text-gray-400 mb-3 font-mono">优秀毕业设计</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        针对大连路-黄台路历史街区，提出“新功能引入”与“肌理延续”策略。包含城市设计及个人完成的博物馆设计，在保护风貌的同时激活区域活力。
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 科研与荣誉 Honors -->
+        <section id="honors" class="mb-24 fade-in-up delay-300 border-t border-gray-100 pt-16">
+            <h2 class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-12">科研与荣誉 Honors & Research</h2>
+            
+            <div class="bg-gray-50 p-8 mb-12 border border-gray-100">
+                <h3 class="text-sm font-bold mb-3 text-gray-900">本科综合荣誉</h3>
+                <p class="text-sm text-gray-600 leading-relaxed font-serif">
+                    中国石油大学(华东) 创新创业实践 "卓越之星" 二等奖、校级科技奖学金、优秀本科毕业设计、优秀学生称号等。
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2023.07</div>
+                    <div class="text-sm font-medium text-gray-900">第十八届“挑战杯”建设银行山东省大学生课外学术科技作品竞赛 <span class="text-gray-400 font-normal ml-2">三等奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">核心成员</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2023.04</div>
+                    <div class="text-sm font-medium text-gray-900">昆工设计杯 · 大学生历史建筑调研 <span class="text-gray-400 font-normal ml-2">优秀奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">组长</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2023.01</div>
+                    <div class="text-sm font-medium text-gray-900">“建行杯”第九届山东省大学生科技创新大赛 <span class="text-gray-400 font-normal ml-2">三等奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">组长</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2022.11</div>
+                    <div class="text-sm font-medium text-gray-900">“青岛设计印象 2022” <span class="text-gray-400 font-normal ml-2">优秀奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">个人</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2022.08</div>
+                    <div class="text-sm font-medium text-gray-900">中国好创意 (第十六届) 暨全国数字艺术设计大赛 文化遗产保护组 <span class="text-gray-400 font-normal ml-2">三等奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">组长</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2022.07</div>
+                    <div>
+                        <div class="text-sm font-medium text-gray-900 mb-1">外观设计专利三项</div>
+                        <ul class="text-xs text-gray-500 space-y-1 list-disc list-inside">
+                            <li>印章 (小青岛灯塔)、冰箱贴 (青岛基督教堂插画) - <span class="text-gray-400">第一完成人</span></li>
+                            <li>包装盒 (青岛红房子插画) - <span class="text-gray-400">第二完成人</span></li>
+                        </ul>
+                    </div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">主要完成人</div>
+                </div>
+                <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2022.06</div>
+                    <div class="text-sm font-medium text-gray-900">第十届全国高校数字艺术设计大赛 <span class="text-gray-400 font-normal ml-2">校级二等奖</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">个人</div>
+                </div>
+                 <div class="grid grid-cols-[80px_1fr_auto] gap-4 items-baseline border-b border-gray-50 pb-4 hover:bg-gray-50/50 transition-colors px-2 py-2">
+                    <div class="text-xs font-mono text-gray-400">2019.12</div>
+                    <div class="text-sm font-medium text-gray-900">“逐梦新时代学习正当时——寻找青年‘政治佳’” (第四季) <span class="text-gray-400 font-normal ml-2">十佳作品</span></div>
+                    <div class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">组长</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能与经历 Skills & Experience -->
+        <section id="experience" class="mb-24 fade-in-up delay-300 border-t border-gray-100 pt-16">
+            <div class="grid md:grid-cols-2 gap-16">
+                
+                <!-- 左侧：技能栈 -->
+                <div>
+                    <h2 class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8">技术栈 Skills</h2>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-sm font-bold mb-3 border-l-2 border-black pl-3">Programming</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            JavaScript, C/C++, C#, Arduino<br>
+                            <span class="text-gray-400 text-xs">擅长物理计算与互动逻辑实现</span>
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-sm font-bold mb-3 border-l-2 border-black pl-3">3D & Interaction</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Unity, Blender, SketchUp, V-Ray, Keyshot<br>
+                            <span class="text-gray-400 text-xs">熟练运用 Unity 进行游戏开发与场景渲染</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold mb-3 border-l-2 border-black pl-3">Design Tools</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Figma, Adobe Suite (Ps/Ai), AutoCAD (二级证书)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 右侧：工作经历 -->
+                <div>
+                    <h2 class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8">经历 Experience</h2>
+                    
+                    <div class="mb-8 relative border-l border-gray-200 pl-6 pb-2">
+                        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 bg-gray-200 rounded-full"></div>
+                        <div class="text-xs text-gray-400 font-mono mb-1">2025.05 - 2025.09</div>
+                        <h4 class="text-sm font-bold text-gray-900">策展公关推广</h4>
+                        <p class="text-xs text-gray-500 mb-2">Goldsmiths FOLD 毕业展</p>
+                        <p class="text-sm text-gray-600">负责展览公关宣传、撰写新闻稿及社交媒体运营，协调现场活动流程。</p>
+                    </div>
+
+                    <div class="mb-8 relative border-l border-gray-200 pl-6 pb-2">
+                        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 bg-gray-200 rounded-full"></div>
+                        <div class="text-xs text-gray-400 font-mono mb-1">2022.01 - 2022.02</div>
+                        <h4 class="text-sm font-bold text-gray-900">设计师助理 (实习)</h4>
+                        <p class="text-xs text-gray-500 mb-2">北京市建筑设计研究院 (BIAD)</p>
+                        <p class="text-sm text-gray-600">协助建筑模型深化，绘制施工图与效果图，参与大型公建项目的基础工作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 底部 Footer -->
+        <footer id="contact" class="pb-12 pt-12 border-t border-black">
+            <div class="flex flex-col md:flex-row justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-serif font-medium mb-4">Let's Create Something.</h2>
+                    <div class="space-y-1 text-sm text-gray-600">
+                        <p>E: <a href="mailto:wjy20000324@163.com" class="hover:text-black hover:underline">wjy20000324@163.com</a></p>
+                        <p>T: +86 195 0613 6022</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 text-right">
+                    <p class="text-[10px] text-gray-300 mt-8">&copy; 2026 Wen Jiayin. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
