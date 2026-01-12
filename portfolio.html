@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* 隐藏滚动条但保留功能 */
         ::-webkit-scrollbar { width: 0px; background: transparent; }
     </style>
 </head>
@@ -19,29 +18,52 @@
         <div class="text-sm font-bold tracking-widest uppercase">Wen Jiayin.</div>
         
         <div class="flex gap-4">
-            <!-- 返回简历主页 -->
             <a href="index.html" class="flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                Back to Resume
+                <span class="hidden sm:inline">Back to Resume</span>
+                <span class="sm:hidden">Back</span>
             </a>
             
-            <!-- 下载按钮 (防止浏览器不显示PDF) -->
             <a href="portfolio.pdf" download class="px-4 py-2 bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors">
-                Download PDF
+                Download
             </a>
         </div>
     </nav>
 
-    <!-- PDF 展示区域 -->
+    <!-- 主体区域 -->
     <main class="flex-grow w-full h-full relative bg-[#222]">
         
-        <!-- 嵌入 PDF -->
-        <!-- type="application/pdf" 告诉浏览器这是个文档 -->
-        <embed src="portfolio.pdf" type="application/pdf" width="100%" height="100%" class="block w-full h-full" />
+        <!-- 方案 A：电脑端 (只在 md/中等屏幕以上 显示) -->
+        <!-- 注意 class 里的 hidden md:block -->
+        <embed src="portfolio.pdf" type="application/pdf" width="100%" height="100%" class="hidden md:block w-full h-full" />
         
-        <!-- 如果浏览器不支持预览，显示这个提示 -->
+        <!-- 方案 B：手机端 (只在 md/中等屏幕以下 显示) -->
+        <!-- 手机无法内嵌滚动 PDF，所以显示引导按钮 -->
+        <div class="md:hidden w-full h-full flex flex-col items-center justify-center p-6 text-center space-y-6">
+            
+            <div class="bg-gray-800/50 p-8 rounded-2xl border border-white/10 max-w-sm">
+                <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                
+                <h3 class="text-xl font-medium mb-2">移动端预览</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                    手机浏览器不支持直接嵌入翻阅 PDF 文件。<br>
+                    请点击下方按钮进行全屏阅读。
+                </p>
+                
+                <a href="portfolio.pdf" class="block w-full py-3 bg-white text-black font-bold text-sm rounded hover:bg-gray-200 transition-colors uppercase tracking-widest">
+                    打开完整作品集
+                </a>
+            </div>
+
+        </div>
+
+        <!-- 加载失败提示 (保留) -->
         <div class="absolute inset-0 flex items-center justify-center -z-10">
-            <p class="text-gray-500 text-sm">正在加载作品集... <br>如果无法显示，请点击右上角下载。</p>
+            <p class="text-gray-500 text-sm">Loading...</p>
         </div>
 
     </main>
